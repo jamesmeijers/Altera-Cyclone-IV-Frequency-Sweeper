@@ -1,4 +1,12 @@
-
+//reconfigurable PLL
+//clock 50 is a 50MHz clock input
+//reset is a standard, active high reset
+//next_frequency tells the PLL to advance the frequency (only when coming out of reset or when freq_ready is high)
+//frequency is the current frequency in MHz
+//freq_ready is high when the output clock is locked to the frequency given by frequency
+//reconfig_CLK is the output clock
+//curr_state is the state of the PLL (mostly used for debugging purposes)
+//add is the amount, in MHz, to increase the clock each time next_frequency goes high
 module pll(
 	input CLK_50,
 	input reset,
